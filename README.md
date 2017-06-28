@@ -1,3 +1,48 @@
+#Getting Started
+
+This app is a small "single-page" JS app, relying on JQuery, Bootstrap3, and Flask. Once the Flask server spins up, it will scrape any "article.json" file and populate the Psql database. The JS code relies on the Flask server for JSON data.
+
+The JS code was originally built to have JSON manually input, then I decided to just attach it to a Flask server - as such, I didn't go through the setup time to spin up something in React, but you can see some of the (hackey) philosophy in the JS file.
+
+Note the Flask app is MINIATURE - Migrations and auto-db creation are NOT setup! Model, controller, and routes are in the single App.py file. I elected to avoid needless complication and Blueprints for this, but scaling out you would want to convert all that.
+
+You must complete step 1 or else a Black Hole will explode!
+
+1. PSQL: CREATE DATABASE cybrary_dev_test, THEN CREATE TABLE (id, interger, data, json)
+
+2. Pip install from requirements.txt (Flask, CORS, ipython, SQLAlchemy)
+
+3. Run "Python App.py" in terminal, server should now be running on localhost://3000
+  - the startup script will also check for a "articles.json" file, and if found populate the database; otherwise the database will be empty, and you will be sad
+
+4. Simply "Open in Browser" index.js, point it at the server if needed
+
+5. The "/" route does nothing, its just for testing purposes - use "/articles"
+
+6. Once pointed at the "/articles" route, you should go directly to the home view of all articles displayed in descending format. Point and click from there
+
+
+#To-Do
+
+- Add detection of common "back" and "forward" buttons to compensate for "single-app-ness", and go back and forth accordingly (React Router would have helped here a lot...)
+
+- Refactor state-startup currently fetching articles in indexPopulate function
+
+- Clean up code, make look less like a dying horse
+
+- Refactor state
+
+
+
+
+
+
+
+
+
+
+
+
 # Cybrary Technical Interview
 The purpose of this is to evaluate an interviewee’s technical knowledge and understanding in a day-to-day like scenario.
 
