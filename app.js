@@ -37,7 +37,7 @@ $(document).ready(function(){
       <img src=${headerImg} class="img-responsive"></img>
       <p>${publish}</p>
       <div>${preview}</div>
-      <button id=${idx}>Read more...</button>
+      <button id=${idx}>Read more</button>
     </div>
   `;
 
@@ -86,7 +86,9 @@ $(document).ready(function(){
       $(".article-list-component").append()
       r.forEach((article, idx) => {
         $(".article-list-component").append(
-          articleComponent(idx, article.headerImage, article.post_title, article.post_date, article.post_name)
+          articleComponent(idx, article.headerImage, article.post_title, article.post_date,
+          // regular expression truncates most likely HTML tags, replaces with blank
+           article.post_content.replace(/<(?:.|\r\n|\n|\r)*?>/gm, '').slice(0,400)+"...")
         );
         $(`#${idx}`).click(articleDetail);
       });
@@ -109,10 +111,12 @@ $(document).ready(function(){
       articleData = userState["articleData"][event.target.id];
       idx = event.target.id
     }
-  // Clear container and populate with article details
+  // Clear container and populate with article details; 
+  // event handler on button to go back to home page
     $(".article-list-component").empty()
       .append(articleDetailComponent(articleData));
       $("button").click(indexPopulate);
+      $("img").addClass("img-responsive");
   // Set Glyphicon based on user state object
       userState["likes"][idx] !== undefined ? liked = true : liked = false;
       if (liked) {
