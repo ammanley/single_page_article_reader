@@ -30,17 +30,14 @@ You must complete step 1 or else a Black Hole will explode!
 
 - Clean up code, make look less like a dying horse
 
-- Refactor state
+- Refactor state management
 
 
 
 
 
 
-
-
-
-
+\/ Please let me know if you want these removed, as this repo is currently public \/
 
 
 # Cybrary Technical Interview
