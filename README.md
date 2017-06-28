@@ -1,4 +1,4 @@
-#Getting Started
+# Getting Started
 
 This app is a small "single-page" JS app, relying on JQuery, Bootstrap3, and Flask. Once the Flask server spins up, it will scrape any "article.json" file and populate the Psql database. The JS code relies on the Flask server for JSON data.
 
@@ -22,7 +22,7 @@ You must complete step 1 or else a Black Hole will explode!
 6. Once pointed at the "/articles" route, you should go directly to the home view of all articles displayed in descending format. Point and click from there
 
 
-#To-Do
+# To-Do
 
 - Add detection of common "back" and "forward" buttons to compensate for "single-app-ness", and go back and forth accordingly (React Router would have helped here a lot...)
 
