@@ -1,5 +1,5 @@
 from flask import Flask, json, jsonify
-from flask_cors import CORS, cross_origin
+from flask_cors import CORS
 from flask_sqlalchemy import SQLAlchemy 
 
 app = Flask(__name__)
@@ -44,7 +44,6 @@ def article_data():
     articles = [a.data for a in Article.query.all()]
     return jsonify(articles)
 
-# from IPython import embed; embed()
 
 if __name__ == '__main__':
     app.run(port=3000,debug=True)
