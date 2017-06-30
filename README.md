@@ -8,7 +8,8 @@ Note the Flask app is MINIATURE - Migrations and auto-db creation are NOT setup!
 
 You must complete step 1 or else a Black Hole will explode!
 
-1. PSQL: CREATE DATABASE cybrary_dev_test, THEN CREATE TABLE (id, interger, data, json)
+1. PSQL: CREATE DATABASE cybrary_dev_test, then CREATE TABLE (id interger, data json)
+- Important Note: This was developed on a Mac with peer auth; if you're on Ubuntu or simliar, you'll need to edit the Database URI with the user:pass@cybrary_dev_test accordingly
 
 2. Pip install from requirements.txt (Flask, CORS, ipython, SQLAlchemy)
 
