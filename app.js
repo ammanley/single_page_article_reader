@@ -77,6 +77,7 @@ $(function(){
           $(`#${idx}`).click(articleDetail);
         });
       // After render, sets state based on if we were home or not
+        userState['articleData'] = r;
         setState(userState['page'], userState['likes'], articleData=r)
       });
     // else renders from saved articleData state
