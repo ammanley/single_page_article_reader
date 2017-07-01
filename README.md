@@ -27,11 +27,15 @@ You must complete step 1 or else a Black Hole will explode!
 
 - Add detection of common "back" and "forward" buttons to compensate for "single-app-ness", and go back and forth accordingly (React Router would have helped here a lot...)
 
+- Add auto-scroll to top for switching from article index to article detail view (currently sticks you where you were on the article index)
+
+- Maintain page-position state for article index?
+
 - Refactor state-startup currently fetching articles in indexPopulate function
 
 - Clean up code, make look less like a dying horse
 
-- Refactor state management
+- Refactor state management 
 
 
 
