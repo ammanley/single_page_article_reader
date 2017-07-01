@@ -140,6 +140,7 @@ $(function(){
   // Page set based on 1 of 2 load scenarios, set to state for changing or coming back later
     userState["page"] = id || event.target.id
     setState(userState["page"], userState["likes"], userState["articleData"])
+    $(window).scrollTop(0);
   };
 
   // Are we home or on a detail page?
