@@ -49,7 +49,11 @@ $(function(){
     <div id="liked-button-container"><span id="like-button" class="glyphicon glyphicon-heart-empty"></span></div>
     <h4>By ${articleData["post_author"]}</h4>
     <p>Published ${articleData["post_date"]}</p>
+<<<<<<< HEAD
     <div class="article-detail-content">${articleData["post_content"]}</div>
+=======
+    <div>${articleData["post_content"]}</div>
+>>>>>>> c351e2d2eca39d73289da6802a42f965036ec370
     <button><-- Go Back</button>
     `
 
