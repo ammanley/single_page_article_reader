@@ -1,0 +1,13 @@
+
+.article-header {
+    text-decoration: underline;
+    font-style: oblique;
+}
+
+.glyphicon-heart, .glyphicon-heart-empty{
+    font-size: 30px;
+}
+
+.container-fluid {
+    background-color: #ddd;
+}
